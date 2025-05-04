@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Happy Birthday Shanza</title>
+  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet">
+  <style>
+    html, body {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+      /* Romantic pink → purple gradient: */
+      background: linear-gradient(135deg, #ff9a9e 0%, #8e44ad 100%);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      font-family: 'Great Vibes', cursive;
+      overflow: hidden;
+    }
+
+    .container {
+      position: relative;
+      width: 90vw;
+      max-width: 800px;
+      margin-top: 5vh;
+    }
+
+    .gradient-bar {
+      position: relative;
+      width: 100%;
+      height: 60px;
+      background: linear-gradient(to right, #8e044d, #e91e63);
+      border-radius: 30px;
+      border: 2px solid #ff80ab;
+      box-shadow:
+        0 4px 15px rgba(233, 30, 99, 0.5),
+        0 0 20px #ff4081 inset;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      font-size: 2rem;
+      text-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
+      z-index: 2;
+    }
+
+    .flower {
+      position: absolute;
+      font-size: 1.5rem;
+      opacity: 0;
+      animation: floatUp 5s infinite ease-in-out;
+      z-index: 1;
+    }
+
+    /* Each flower’s start is randomized via CSS variables */
+    .flower:nth-child(1) { left: calc(100% * var(--x1)); bottom: calc(100% * var(--y1)); animation-delay: var(--d1)s; }
+    .flower:nth-child(2) { left: calc(100% * var(--x2)); bottom: calc(100% * var(--y2)); animation-delay: var(--d2)s; }
+    .flower:nth-child(3) { left: calc(100% * var(--x3)); bottom: calc(100% * var(--y3)); animation-delay: var(--d3)s; }
+    .flower:nth-child(4) { left: calc(100% * var(--x4)); bottom: calc(100% * var(--y4)); animation-delay: var(--d4)s; }
+    .flower:nth-child(5) { left: calc(100% * var(--x5)); bottom: calc(100% * var(--y5)); animation-delay: var(--d5)s; }
+
+    @keyframes floatUp {
+      0% {
+        transform: translateY(0) scale(0.5);
+        opacity: 0;
+      }
+      25% {
+        opacity: 1;
+      }
+      100% {
+        transform: translateY(-120px) scale(1.2);
+        opacity: 0;
+      }
+    }
+
+    .poetry {
+      position: relative;
+      z-index: 2;
+      width: 90vw;
+      max-width: 500px;
+      margin: 20px 0;
+    }
+
+    .poetry img {
+      width: 100%;
+      height: auto;
+      border-radius: 20px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+      display: block;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container"
+       style="--x1:0.1;--y1:0.8;--d1:0.5;
+              --x2:0.3;--y2:0.9;--d2:1.2;
+              --x3:0.5;--y3:0.7;--d3:1.8;
+              --x4:0.7;--y4:0.6;--d4:2.4;
+              --x5:0.9;--y5:0.4;--d5:3.0;">
+    <!-- Random-start flowers -->
+    <div class="flower">🌸</div>
+    <div class="flower">🌸</div>
+    <div class="flower">🌸</div>
+    <div class="flower">🌸</div>
+    <div class="flower">🌸</div>
+
+    <!-- Birthday Bar -->
+    <div class="gradient-bar">
+      Happy Birthday Shanza
+    </div>
+  </div>
+
+  <!-- Poetry Image -->
+  <div class="poetry">
+    <img src="C:\Users\fc\happy birthday\poetry.jpg" alt="Poetry">
+  </div>
+
+</body>
+</html>
